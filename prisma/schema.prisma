@@ -13,3 +13,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Tour {
+  id              Int            @id @default(autoincrement())
+  name            String         @unique
+  slug            String
+  duration        Int
+  maxGroupSize    Int
+  difficulty      String
+  ratingsAverage  Float          @default(4.5)
+  ratingsQuantity Int            @default(0)
+  price           Float
+  priceDiscount   Float?
+  summary         String
+  description     String?
+  imageCover      String
+  images          String[]
+  createdAt       DateTime      @default(now())
+  startDates      DateTime[]
+  secretTour      Boolean       @default(false)
+}
