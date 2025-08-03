@@ -18,5 +18,5 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src", "generated", "node_modules/@prisma/client"]
+  "include": ["src", "generated", "node_modules/@prisma/client", "script"]
 }
